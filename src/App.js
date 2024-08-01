@@ -12,6 +12,10 @@ function App() {
   const handleSubtract = () => {
     setResult(Number(num1) - Number(num2));
   };
+  //multiply is done here
+  const handleMultiply = () => {
+    setResult(Number(num1) * Number(num2));
+  };
 
   return (
     <div className="App">
@@ -32,6 +36,7 @@ function App() {
           />
           <button onClick={handleAdd}>Add</button>
           <button onClick={handleSubtract}>Subtract</button>
+          <button onClick={handleMultiply}>Multiply</button>
         </div>
         <h2>Result: {result}</h2>
         <h5>Here is yours Calculation</h5>
