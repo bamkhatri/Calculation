@@ -9,6 +9,9 @@ function App() {
   const handleAdd = () => {
     setResult(Number(num1) + Number(num2));
   };
+  const handleSubtract = () => {
+    setResult(Number(num1) - Number(num2));
+  };
 
   return (
     <div className="App">
@@ -28,8 +31,11 @@ function App() {
             placeholder="Enter second number"
           />
           <button onClick={handleAdd}>Add</button>
+          <button onClick={handleSubtract}>Subtract</button>
         </div>
         <h2>Result: {result}</h2>
+        <h5>Here is yours Calculation</h5>
+        {/* subtraction added */}
         <h5>Here is yours Calculations</h5>
       </header>
     </div>
