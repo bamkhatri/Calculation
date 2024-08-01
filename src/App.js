@@ -1,22 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [result, setResult] = useState(0);
+
+  const handleAdd = () => {
+    setResult(Number(num1) + Number(num2));
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Simple Calculation</h1>
+        <div>
+          <input
+            type="number"
+            value={num1}
+            onChange={(e) => setNum1(e.target.value)}
+            placeholder="Enter first number"
+          />
+          <input
+            type="number"
+            value={num2}
+            onChange={(e) => setNum2(e.target.value)}
+            placeholder="Enter second number"
+          />
+          <button onClick={handleAdd}>Add</button>
+        </div>
+        <h2>Result: {result}</h2>
+        <h5>Here is yours Calculation</h5>
       </header>
     </div>
   );
