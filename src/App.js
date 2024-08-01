@@ -35,7 +35,7 @@ function App() {
         </div>
         <h2>Result: {result}</h2>
         <h5>Here is yours Calculation</h5>
-        {/* subtraction added */}
+        {/* subtraction addeds */}
       </header>
     </div>
   );
