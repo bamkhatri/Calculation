@@ -30,7 +30,7 @@ function App() {
           <button onClick={handleAdd}>Add</button>
         </div>
         <h2>Result: {result}</h2>
-        <h5>Here is yours Calculation</h5>
+        <h5>Here is yours Calculations</h5>
       </header>
     </div>
   );
