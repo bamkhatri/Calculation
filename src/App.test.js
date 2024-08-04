@@ -51,8 +51,8 @@ describe("App Component", () => {
     expect(screen.getByText(/Result:/)).toHaveTextContent("Result: 50");
   });
 
-  // This divides numbers correctly and should pass
-  test("divides numbers correctly", () => {
+  // This divides numbers incorrectly and should not pass
+  test("divides numbers incorrectly", () => {
     fireEvent.change(screen.getByPlaceholderText("Enter first number"), {
       target: { value: "10" },
     });
@@ -60,7 +60,7 @@ describe("App Component", () => {
       target: { value: "5" },
     });
     fireEvent.click(screen.getByText("Divide"));
-    expect(screen.getByText(/Result:/)).toHaveTextContent("Result: 2");
+    expect(screen.getByText(/Result:/)).toHaveTextContent("Result: 3");
   });
   // This test shoud failed as I put reuslt wrong intentionally
   test("divides numbers incorrectly (intentionally failing)", () => {
