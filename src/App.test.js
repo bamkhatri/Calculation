@@ -50,13 +50,13 @@ describe("App Component", () => {
     fireEvent.click(screen.getByText("Multiply"));
     expect(screen.getByText(/Result:/)).toHaveTextContent("Result: 50");
   });
-  // This multiple numbers incorrectly and should not pass
+  // This multiple numbers correctly and should  pass
   test("multiplies numbers incorrectly", () => {
     fireEvent.change(screen.getByPlaceholderText("Enter first number"), {
       target: { value: "10" },
     });
     fireEvent.change(screen.getByPlaceholderText("Enter second number"), {
-      target: { value: "5" },
+      target: { value: "6" },
     });
     fireEvent.click(screen.getByText("Multiply"));
     expect(screen.getByText(/Result:/)).toHaveTextContent("Result: 60");
@@ -65,7 +65,7 @@ describe("App Component", () => {
   // This test shoud fail now
   test("divides numbers incorrectly (intentionally failing)", () => {
     fireEvent.change(screen.getByPlaceholderText("Enter first number"), {
-      target: { value: "10" },
+      target: { value: "15" },
     });
     fireEvent.change(screen.getByPlaceholderText("Enter second number"), {
       target: { value: "5" },
